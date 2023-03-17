@@ -78,5 +78,71 @@ img {
 nav {
     width: 100vw;
     height: calc(16px * 5);
+    /* display: flex; */
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: var(--color-bg-2);
+    border-bottom: 0.2rem solid var(--color-bg-3);
+    box-shadow: 0 0.2rem 0.7rem rgba(0 0 0 /0.3);
+}
+
+.nav-container {
+    height: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-primary-veriant);
+}
+
+.nav-links {
+    display: flex;
+    gap: 4rem;
+}
+
+.nav-links li {
+    position: relative;
+}
+.nav-links li::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--color-primary);
+    bottom: 0;
+    left: 0;
+    transition: var(--transition);
+}
+
+.nav-links li:hover::after {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.nav-socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-socials a {
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(var(--color-primary-veriant), var(--color-primary));
+    display: grid;
+    place-items: center;
+    color: var(--color-bg-4);
+    border-radius: 0.5rem;
+    transition: var(--transition);
+}
+
+.nav-socials a:hover {
+    box-shadow: 0 1rem 1rem rgba(0 0 0 /0.5);
 }
