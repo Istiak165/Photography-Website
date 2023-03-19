@@ -385,3 +385,81 @@ header {
 
 }
 /* =============Gallery Ends========= */
+/* =============College Starts========= */
+#college {
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+}
+
+.college-heads {
+    text-align: right;
+}
+
+.college-heads h2 {
+    margin-bottom: 2rem;
+}
+
+.college-heads p {
+    margin-bottom: 5rem;
+    padding-left: 50%;
+}
+
+.college-images {
+    display: grid;
+    grid-template-areas: 
+     "b1 b1 b2"
+     "b3 b3 b2"
+     "b3 b3 b2"
+     "b4 b5 b6"
+    ;
+    gap: 5rem;
+
+}
+
+.college-image:nth-child(1) {
+    grid-area: b1;
+}
+
+.college-image:nth-child(2) {
+    grid-area: b2;
+}
+
+.college-image:nth-child(3) {
+    grid-area: b3;
+}
+
+.college-image:nth-child(4) {
+    grid-area: b4;
+}
+
+.college-image:nth-child(5) {
+    grid-area: b5;
+}
+
+.college-image:nth-child(6) {
+    grid-area: b6;
+}
+
+.college-image {
+    border: 1rem solid var(--color-bg-4);
+}
+
+
+.college-image img {
+    height: 100%;
+    filter: saturate(0) brightness(0.5);
+    transition: var(--transition);
+}
+
+.college-image:hover img {
+    filter: saturate(1) brightness(1);
+}
+/* =============College Ends========= */
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
